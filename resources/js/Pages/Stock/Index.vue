@@ -21,6 +21,7 @@
                     @hit="selectedSku = $event"
                 /> -->
                 <vue-bootstrap-typeahead 
+                placeholder="Search SKU/Code here."
                 v-model="form.sku"
                 :data="skus"
                 @hit="selectedSku = $event"

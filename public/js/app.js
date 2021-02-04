@@ -5434,6 +5434,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 
@@ -38642,7 +38643,7 @@ var render = function() {
             },
             [
               _c("vue-bootstrap-typeahead", {
-                attrs: { data: _vm.skus },
+                attrs: { placeholder: "Search SKU/Code here.", data: _vm.skus },
                 on: {
                   hit: function($event) {
                     _vm.selectedSku = $event

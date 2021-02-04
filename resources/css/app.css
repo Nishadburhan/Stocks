@@ -1,0 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'bootstrap';
+/* @import 'vue-bootstrap-typeahead'; */
+/* @import 'dist/VueBootstrapTypeahead'; */

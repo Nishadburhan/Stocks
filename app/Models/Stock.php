@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Stock extends Model
 {
     use HasFactory;
-    protected $fillable=['sku', 'office', 'das', 'zero_one', 'zero_two', 'techmate','totalStock', 'otherSalesRate', 'PurchaseRate'];
+    protected $fillable=['sku', 'office', 'das', 'zero_one', 'zero_two', 'techmate','totalStock', 'status', 'otherSalesRate', 'PurchaseRate'];
 }

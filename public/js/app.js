@@ -5450,6 +5450,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 
@@ -5486,7 +5487,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getStock: function getStock(data) {
       var _this = this;
 
-      _inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__.InertiaProgress.init();
+      // InertiaProgress.init();
       axios.post('/api/stocks/sku/search', {
         body: this.form
       }).then(function (res) {
@@ -39076,6 +39077,7 @@ var render = function() {
             [
               _c("vue-bootstrap-typeahead", {
                 attrs: {
+                  required: "required",
                   placeholder: "Search SKU/Code here...",
                   data: _vm.skus
                 },

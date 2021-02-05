@@ -21,6 +21,7 @@
                     @hit="selectedSku = $event"
                 /> -->
                 <vue-bootstrap-typeahead 
+                required="required"
                 placeholder="Search SKU/Code here..."
                 v-model="form.sku"
                 :data="skus"
@@ -195,7 +196,7 @@
                 });
             },
             getStock(data) {
-                InertiaProgress.init();
+                // InertiaProgress.init();
                 axios.post('/api/stocks/sku/search', {body:this.form})
                 .then(res => {
                     this.products=res.data;

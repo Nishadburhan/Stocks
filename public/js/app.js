@@ -38643,7 +38643,10 @@ var render = function() {
             },
             [
               _c("vue-bootstrap-typeahead", {
-                attrs: { placeholder: "Search SKU/Code here.", data: _vm.skus },
+                attrs: {
+                  placeholder: "Search SKU/Code here...",
+                  data: _vm.skus
+                },
                 on: {
                   hit: function($event) {
                     _vm.selectedSku = $event

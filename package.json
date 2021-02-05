@@ -27,6 +27,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@inertiajs/progress": "^0.2.4",
         "bootstrap": "^4.6.0",
         "vue-bootstrap-typeahead": "^0.2.6"
     }

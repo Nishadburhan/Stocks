@@ -57,9 +57,9 @@ class StockController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Stock $stock)
     {
-        return Stock::find($id);
+        return $stock;
     }
 
     // Stock by sku 
@@ -73,6 +73,11 @@ class StockController extends Controller
         $query=$request->input('query');
         $suggestion=Stock::select('sku')->where('sku', 'like', '%'.$query.'%')->get();
         return $suggestion;
+    }
+
+    public function sku($sku) {
+        $porduct=Stock::where('sku', $sku)->get();
+        return $porduct;
     }
     /**
      * Show the form for editing the specified resource.
@@ -92,9 +97,10 @@ class StockController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Stock $stock)
     {
-        //
+        $stock->update($request->all());
+        return response()->json($stock, 200);
     }
 
     /**

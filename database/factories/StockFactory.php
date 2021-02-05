@@ -22,7 +22,7 @@ class StockFactory extends Factory
     public function definition()
     {
         return [
-            'sku'=> $this->faker->hexcolor,
+            'sku'=> $this->faker->randomNumber,
             'office'=> $this->faker->randomDigit,
             'das'=> $this->faker->randomDigit,
             'zero_one'=> $this->faker->randomDigit,

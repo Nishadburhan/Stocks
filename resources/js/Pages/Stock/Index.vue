@@ -161,12 +161,14 @@
     import JetApplicationLogo from '@/Jetstream/ApplicationLogo'
     import AutoComplete from './AutoComplete.vue';
     import VueBootstrapTypeahead from 'vue-bootstrap-typeahead';
+    import { InertiaProgress } from '@inertiajs/progress';
 
     export default {
         components: {
             JetApplicationLogo,
             AutoComplete,
-            VueBootstrapTypeahead
+            VueBootstrapTypeahead,
+            InertiaProgress
         },
         data() {
             return {
@@ -174,7 +176,7 @@
                     sku:null
                 },
                 products:[],
-                skus: ['ssd','ssa','mmd'],
+                skus: [],
                 skuSearch: null,
                 selectedSku: null
             }
@@ -184,14 +186,15 @@
         },
         methods:{
             stocks() {
-                fetch('/api/stock')
+                fetch('/api/stocks')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
                 });
             },
             getStock(data) {
-                axios.post('/api/get_stock', {body:this.form})
+                InertiaProgress.init();
+                axios.post('/api/stocks/sku/search', {body:this.form})
                 .then(res => {
                     this.products=res.data;
                     // this.addresses = res.data
@@ -205,7 +208,7 @@
                 // const res = await fetch(API_URL.replace(':query', query))
                 // const suggestions = await res.json()
                 // this.skus = suggestions.suggestions
-                await axios.post('/api/get_suggestions', {query})
+                await axios.post('/api/stocks/sku/suggestions', {query})
                 .then(res => {
                     // console.log(this.skus);
                     res.data.forEach(element => {

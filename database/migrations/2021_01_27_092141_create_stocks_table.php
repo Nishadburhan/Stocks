@@ -24,6 +24,7 @@ class CreateStocksTable extends Migration
             $table->integer('totalStock');
             $table->decimal('otherSalesRate', $precision = 8, $scale = 2);
             $table->decimal('PurchaseRate', $precision = 8, $scale = 2);
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

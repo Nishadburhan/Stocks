@@ -28,6 +28,8 @@
 
                 />
 
+                <button class="btn btn-primary ml-2">Search</button>
+
                 <!-- <div> -->
                     <!-- <input type="text" class="ring-1 block rounded-md w-90 h-25" v-model="form.sku" placeholder="Search SKU/Code here.."> -->
                 <!-- </div> -->

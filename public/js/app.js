@@ -5448,6 +5448,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 
 
 
@@ -39089,7 +39091,11 @@ var render = function() {
                   },
                   expression: "form.sku"
                 }
-              })
+              }),
+              _vm._v(" "),
+              _c("button", { staticClass: "btn btn-primary ml-2" }, [
+                _vm._v("Search")
+              ])
             ],
             1
           )

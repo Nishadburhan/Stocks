@@ -39096,7 +39096,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("button", { staticClass: "btn btn-primary ml-2" }, [
-                _vm._v("Search")
+                _vm._v("Find")
               ])
             ],
             1

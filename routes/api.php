@@ -34,6 +34,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
     Route::post('stocks', [StockController::class, 'store']);
     Route::put('stocks/{stock}', [StockController::class, 'update']);
-    Route::delete('stocks/{stock}', [StockController::class, 'update']);
+    // Route::delete('stocks/{stock}', [StockController::class, 'update']);
 // });
 

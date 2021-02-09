@@ -99,8 +99,14 @@ class StockController extends Controller
      */
     public function update(Request $request)
     {
-       
-        Stock::where('sku', $request->input('sku'))->update($request->all());
+        $sku=$request->input('sku');
+        if($sku==null || $sku == '') {
+            return response()->json([
+                'status' => false,
+                'message' => 'SKU cannot be null'
+            ], 400);
+        }
+        Stock::where('sku',$sku)->update($request->all());
         // // $stock->update($request->all());
         return response()->json([
             'status'=> true,

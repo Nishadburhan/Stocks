@@ -97,10 +97,11 @@ class StockController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Stock $stock)
+    public function update(Request $request)
     {
+       
         Stock::where('sku', $request->input('sku'))->update($request->all());
-        // $stock->update($request->all());
+        // // $stock->update($request->all());
         return response()->json([
             'status'=> true,
             'message'=> 'Updated Successfull'
